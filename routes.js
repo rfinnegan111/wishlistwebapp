@@ -25,13 +25,13 @@ router.get('/dashboard', dashboard.index);
 router.get('/about', about.index);
 router.get('/wishlist/:id', wishlist.index);
 
-router.get('/wishlist/:id/deleteSong/:songid', wishlist.deleteSong);
-router.post('/wishlist/:id/addsong', wishlist.addSong);
+router.get('/wishlist/:id/deleteGame/:gameid', wishlist.deleteGame);
+router.post('/wishlist/:id/addgame', wishlist.addGame);
 
 router.get('/dashboard/deletewishlist/:id', dashboard.deleteWishlist);
 router.post('/dashboard/addwishlist', dashboard.addWishlist);
 
-router.post('/wishlist/:id/updatesong/:songid', wishlist.updateSong);
+router.post('/wishlist/:id/updategame/:gameid', wishlist.updateGame);
 
 // export router module
 module.exports = router;
