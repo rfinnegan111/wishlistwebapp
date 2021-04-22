@@ -14,7 +14,7 @@ catch(e) {
   process.exit(1);
 }
 
-const playlistStore = {
+const wishListStore = {
 
   store: new JsonStore('./models/wishlist-store.json', { wishlistCollection: [] }),
   collection: 'wishlistCollection',
@@ -32,37 +32,37 @@ const playlistStore = {
         if (!err) {
           cloudinary.uploader.upload('tempimage', result => {
             console.log(result);
-            playlist.picture = result.url;
+            wishlist.picture = result.url;
             response();
           });
         }
       });
-    this.store.add(this.collection, playlist);
+    this.store.add(this.collection, wishlist);
   },
 
-  removePlaylist(id) {
-    const playlist = this.getPlaylist(id);
-    this.store.remove(this.collection, playlist);
+  removeWishlist(id) {
+    const wishlist = this.getWishlist(id);
+    this.store.remove(this.collection, wishlist);
   },
 
-  removeAllPlaylists() {
+  removeAllWishlists() {
     this.store.removeAll(this.collection);
   },
 
   addSong(id, song) {
-    const playlist = this.getPlaylist(id);
-    playlist.songs.push(song);
+    const wishlist = this.getWishlist(id);
+    wishlist.songs.push(song);
   },
 
   removeSong(id, songId) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
+    const wishlist = this.getWishlist(id);
+    const songs = wishlist.songs;
     _.remove(songs, { id: songId});
   },
   
   editSong(id, songId, updatedSong) {
-    const playlist = this.getPlaylist(id);
-    const songs = playlist.songs;
+    const wishlist = this.getWishlist(id);
+    const songs = wishlist.songs;
     const index = songs.findIndex(song => song.id === songId);
     songs[index].title = updatedSong.title;
     songs[index].artist = updatedSong.artist;
@@ -70,9 +70,9 @@ const playlistStore = {
     songs[index].duration = updatedSong.duration;
   },
   
-  getUserPlaylists(userid) {
+  getUserWishlists(userid) {
     return this.store.findBy(this.collection, { userid: userid });
   },
 };
 
-module.exports = playlistStore;
+module.exports = wishlistStore;

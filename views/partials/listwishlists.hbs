@@ -1,5 +1,5 @@
 <div class="ui centered cards">
-  {{#each playlists}}
+  {{#each wishlists}}
     <div class="ui card">
       <div class="image">
         <img src="{{picture}}">
@@ -11,10 +11,10 @@
         </div>
       </div>
       <div class="extra content">
-        <a href="/playlist/{{id}}" class="ui icon button">
+        <a href="/wishlist/{{id}}" class="ui icon button">
           <i class="icon folder open"></i>
         </a>
-        <a href="/dashboard/deleteplaylist/{{id}}" class="ui icon button">
+        <a href="/dashboard/deletewishlist/{{id}}" class="ui icon button">
           <i class="icon trash"></i>
         </a>
       </div>

@@ -2,7 +2,7 @@
 
 // import all required modules
 const logger = require('../utils/logger');
-const playlistStore = require('../models/playlist-store.js');
+const wishlistStore = require('../models/wishlist-store.js');
 const accounts = require ('./accounts.js');
 
 // create start object
@@ -16,16 +16,16 @@ const start = {
     
     if(loggedInUser){
       
-      const playlists = playlistStore.getAllPlaylists();
-      let numPlaylists = playlists.length;
+      const wishlists = wishlistStore.getAllWishlists();
+      let numWishlists = wishlists.length;
       let numSongs = 0;
-      for (let i in playlists) {
-        numSongs = numSongs + playlists[i].songs.length;
+      for (let i in wishlists) {
+        numSongs = numSongs + wishlists[i].songs.length;
       }
 
       const viewData = {
-        title: 'Welcome to the Playlist App!',
-        totalPlaylists: numPlaylists,
+        title: 'Welcome to the Wishlist App!',
+        totalWishlists: numWishlists,
         totalSongs: numSongs,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       };

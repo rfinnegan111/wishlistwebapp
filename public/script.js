@@ -2,7 +2,7 @@
     to your site with Javascript */
 
 // prints "hi" in the browser's dev tools console
-console.log("Hello from the Web App Dev 1 lab!");
+console.log("Hello from the Web App Dev 1 2nd assignment!");
 
 function likeIt(){
   alert('Thanks! You\'re okay too');
