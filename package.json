@@ -1,7 +1,7 @@
 {
   "name": "wishlist-app",
   "version": "0.0.1",
-  "description": "A little playlist maker",
+  "description": "A wishlist maker",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -15,8 +15,8 @@
     "lowdb": "^0.14.0",
     "lodash": "^4.17.15", 
     "cookie-parser": "^1.4.3",
-    "express-fileupload": "^0.1.2",
-    "cloudinary": "^1.8.0"
+    "express-fileupload": "^1.2.1",
+    "cloudinary": "^1.25.1"
   },
   "engines": {
     "node": "10.x"

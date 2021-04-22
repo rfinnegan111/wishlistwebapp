@@ -16,7 +16,7 @@ const dashboard = {
     if (loggedInUser) {
       const viewData = {
         title: "Wishlist Dashboard",
-        wishlists: wishlistStore.getUserPlaylists(loggedInUser.id),
+        wishlists: wishlistStore.getUserWishlists(loggedInUser.id),
         fullname: loggedInUser.firstName + " " + loggedInUser.lastName
       };
       logger.info("about to render" + viewData.wishlists);

@@ -1,13 +1,13 @@
-{{#unless wishlist.songs}}
+{{#unless wishlist.games}}
   <h3 class="ui center aligned message">It's very quiet in here... start adding some games!</h3>
 {{/unless}}
 
-{{#if playlist.songs}}
+{{#if wishlist.games}}
 
   <table class="ui fixed striped table">
     <thead>
       <tr>
-        <th class="four wide">Song</th>
+        <th class="four wide">Game</th>
         <th class="four wide">Artist</th>
         <th class="three wide">Genre</th>
         <th class="three wide">Duration</th>
@@ -16,8 +16,8 @@
       </tr>
     </thead>
   <tbody>
-      {{#each playlist.songs}}
-      <form class = "ui form" action="/playlist/{{../playlist.id}}/updatesong/{{id}}" method="POST">
+      {{#each wishlist.games}}
+      <form class = "ui form" action="/wishlist/{{../wishlist.id}}/updategame/{{id}}" method="POST">
       <tr class="fields">
         <td class="field">
           <span class="ui input">
@@ -43,7 +43,7 @@
           <button class="ui submit icon button"><i class="icon pencil alternate"></i></button>
         </td>
         <td class="center aligned">
-          <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui icon button delsong">
+          <a href="/wishlist/{{../wishlist.id}}/deletegame/{{id}}" class="ui icon button delgame">
             <i class="icon trash"></i>
           </a>
         </td>

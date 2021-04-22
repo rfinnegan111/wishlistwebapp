@@ -52,7 +52,7 @@ const accounts = {
   },
 
   getCurrentUser (request) {
-    const userEmail = request.cookies.playlist;
+    const userEmail = request.cookies.wishlist;
     return userstore.getUserByEmail(userEmail);
   }
 }
