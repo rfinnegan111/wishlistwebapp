@@ -1,0 +1,64 @@
+{{#unless playlist.songs}}
+  <h3 class="ui center aligned message">It's very quiet in here... start adding some songs!</h3>
+{{/unless}}
+
+{{#if playlist.songs}}
+
+  <table class="ui fixed striped table">
+    <thead>
+      <tr>
+        <th class="four wide">Song</th>
+        <th class="four wide">Artist</th>
+        <th class="three wide">Genre</th>
+        <th class="three wide">Duration</th>
+        <th class="one wide"> </th>
+        <th class="one wide"> </th>
+      </tr>
+    </thead>
+  <tbody>
+      {{#each playlist.songs}}
+      <form class = "ui form" action="/playlist/{{../playlist.id}}/updatesong/{{id}}" method="POST">
+      <tr class="fields">
+        <td class="field">
+          <span class="ui input">
+           <input placeholder="Title" type="text" size="30" name="title" autofocus required value = "{{capitalise title}}">
+          </span>
+        </td>
+        <td class="field">
+          <span class="ui input">
+            <input placeholder="Artist" type="text" size="30" name="artist" required value = "{{capitalise artist}}">
+          </span>
+        </td>
+        <td class="field">
+          <span class="ui input">
+            <input placeholder="Genre" type="text" name="genre" required value = "{{capitalise genre}}">
+          </span>
+        </td>
+        <td class="field">
+          <span class="ui input">
+            <input placeholder="Duration" type="text" name="duration" required value = "{{duration}}">
+          </span>
+        </td>
+        <td class="center aligned">
+          <button class="ui submit icon button"><i class="icon pencil alternate"></i></button>
+        </td>
+        <td class="center aligned">
+          <a href="/playlist/{{../playlist.id}}/deletesong/{{id}}" class="ui icon button delsong">
+            <i class="icon trash"></i>
+          </a>
+        </td>
+      </tr>
+      </form> 
+      {{/each}}
+    </tbody>
+  </table>
+
+  <p>
+    <span id="rating"> </span>
+  </p>
+
+  <button class="ui blue button" onclick="getRating()">
+    Rate it! <i class="star icon"></i>
+  </button>
+
+{{/if}}

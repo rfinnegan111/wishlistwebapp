@@ -1,0 +1,69 @@
+{{> menu}}
+
+<section class="ui two column grid segment">
+  <div class="ui column">
+    <h1 class="ui header">
+      Welcome to the Playlist App, {{fullname}}!
+    </h1>
+      <p>
+        This app will allow users to create and maintain a collection of playlists.
+      </p>
+      <div class="buttons">
+        <button class="ui blue button" onclick="showHide()">
+          Read more <i class="arrow circle right icon"></i>
+        </button>
+        <button class="ui green button" onclick="alert('Thanks! You\'re okay too')">
+          Like it? <i class="thumbs up icon"></i>
+        </button>
+        <button class="ui red button" onclick="welcomeUser()">
+          Who are you? <i class="user icon"></i>
+        </button>
+      </div>
+      <div id="readmore" class="ui message">
+        <p>
+          Over the coming months, we will add CRUD (Create, Read, Update, and Delete) functionality to this app. Users will also be able to create an account, log in, and upload images to the app.
+        </p>  
+      </div>
+      <div id="welcomeuser" class="ui message" onclick="hideWelcome()"> </div>
+    
+      <div class="ui divider"></div>
+    
+      <h3 class="ui center aligned header">The Playlist App now contains:</h3>
+      <div class="ui two statistics">
+        <div class="ui huge statistic">
+          <div class="value">
+            {{totalPlaylists}}
+          </div>
+          <div class="label">
+            Playlists
+          </div>
+        </div>
+        <div class="ui huge statistic">
+          <div class="value">
+            {{totalSongs}}
+          </div>
+          <div class="label">
+            Songs
+          </div>
+        </div>
+    </div>
+
+  </div>
+  
+  <div class="ui column">
+    <div class="ui grid">
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2F61H-3pL9ysL.jpg?1554809011078">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2Feacc2030.jpg?1554808740160">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2F1200x630bb.jpg?1554808932348">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/9ba7382f-fb82-4a5a-a4a0-a8e03177a6b9%2FCS425161-01A-BIG.jpg?1554808740840">
+      </div>
+    </div>
+  </div>
+</section>
