@@ -14,7 +14,7 @@ catch(e) {
   process.exit(1);
 }
 
-const wishListStore = {
+const wishlistStore = {
 
   store: new JsonStore('./models/wishlist-store.json', { wishlistCollection: [] }),
   collection: 'wishlistCollection',
@@ -49,25 +49,25 @@ const wishListStore = {
     this.store.removeAll(this.collection);
   },
 
-  addSong(id, song) {
+  addGame(id, game) {
     const wishlist = this.getWishlist(id);
-    wishlist.songs.push(song);
+    wishlist.games.push(game);
   },
 
-  removeSong(id, songId) {
+  removeGame(id, gameId) {
     const wishlist = this.getWishlist(id);
-    const songs = wishlist.songs;
-    _.remove(songs, { id: songId});
+    const games = wishlist.games;
+    _.remove(games, { id: gameId});
   },
   
-  editSong(id, songId, updatedSong) {
+  editGame(id, gameId, updatedGame) {
     const wishlist = this.getWishlist(id);
-    const songs = wishlist.songs;
-    const index = songs.findIndex(song => song.id === songId);
-    songs[index].title = updatedSong.title;
-    songs[index].artist = updatedSong.artist;
-    songs[index].genre = updatedSong.genre;
-    songs[index].duration = updatedSong.duration;
+    const games = wishlist.games;
+    const index = games.findIndex(game => game.id === gameId);
+    games[index].title = updatedGame.title;
+    games[index].artist = updatedGame.artist;
+    games[index].genre = updatedGame.genre;
+    games[index].duration = updatedGame.duration;
   },
   
   getUserWishlists(userid) {

@@ -23,34 +23,34 @@ const wishlist = {
     deleteGame(request, response) {
     const wishlistId = request.params.id;
     const gameId = request.params.gameid;
-    logger.debug('Deleting Song' + songId + 'from Wishlist' + wishlistId);
-    wishlistStore.removeSong(wishlistId, songId);
+    logger.debug('Deleting Game' + gameId + 'from Wishlist' + wishlistId);
+    wishlistStore.removeGame(wishlistId, gameId);
     response.redirect('/wishlist/' + wishlistId);
   },
-    addSong(request, response) {
+    addGame(request, response) {
     const wishlistId = request.params.id;
     const wishlist = wishlistStore.getWishlist(wishlistId);
-    const newSong = {
+    const newGame = {
       id: uuid(),
       title: request.body.title,
       artist: request.body.artist,
       genre: request.body.genre,
       duration: request.body.duration
     };
-    wishlistStore.addSong(wishlistId, newSong);
+    wishlistStore.addGame(wishlistId, newGame);
     response.redirect('/wishlist/' + wishlistId);
   },  
-  updateSong(request, response) {
+  updateGame(request, response) {
     const wishlistId = request.params.id;
-    const songId = request.params.songid;
-    logger.debug("updating song " + songId);
-    const updatedSong = {
+    const gameId = request.params.gameid;
+    logger.debug("updating game " + gameId);
+    const updatedGame = {
       title: request.body.title,
       artist: request.body.artist,
       genre: request.body.genre,
       duration: request.body.duration
     };
-    wishlistStore.editSong(wishlistId, songId, updatedSong);
+    wishlistStore.editGame(wishlistId, gameId, updatedGame);
     response.redirect('/wishlist/' + wishlistId);
   }
 };
