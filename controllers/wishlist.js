@@ -2,34 +2,34 @@
 
 const logger = require('../utils/logger');
 const uuid = require('uuid');
-const playlistStore = require('../models/playlist-store');
+const wishlistStore = require('../models/wishlist-store');
 const accounts = require ('./accounts.js');
 
-const playlist = {
+const wishlist = {
   index(request, response) {
       const loggedInUser = accounts.getCurrentUser(request);  
-      const playlistId = request.params.id;
-      logger.debug('Playlist id = ' + playlistId);
+      const wishlistId = request.params.id;
+      logger.debug('Wishlist id = ' + wishlistId);
       if (loggedInUser) {
       const viewData = {
-        title: 'Playlist',
-        playlist: playlistStore.getPlaylist(playlistId),
+        title: 'Wishlist',
+        wishlist: wishlistStore.getWishlist(wishlistId),
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       };
-      response.render('playlist', viewData);
+      response.render('wishlist', viewData);
       }
       else response.redirect('/');
   },
     deleteSong(request, response) {
-    const playlistId = request.params.id;
+    const wishlistId = request.params.id;
     const songId = request.params.songid;
-    logger.debug('Deleting Song' + songId + 'from Playlist' + playlistId);
-    playlistStore.removeSong(playlistId, songId);
-    response.redirect('/playlist/' + playlistId);
+    logger.debug('Deleting Song' + songId + 'from Wishlist' + wishlistId);
+    wishlistStore.removeSong(wishlistId, songId);
+    response.redirect('/wishlist/' + wishlistId);
   },
     addSong(request, response) {
-    const playlistId = request.params.id;
-    const playlist = playlistStore.getPlaylist(playlistId);
+    const wishlistId = request.params.id;
+    const wishlist = wishlistStore.getWishlist(wishlistId);
     const newSong = {
       id: uuid(),
       title: request.body.title,
@@ -37,11 +37,11 @@ const playlist = {
       genre: request.body.genre,
       duration: request.body.duration
     };
-    playlistStore.addSong(playlistId, newSong);
-    response.redirect('/playlist/' + playlistId);
+    wishlistStore.addSong(wishlistId, newSong);
+    response.redirect('/wishlist/' + wishlistId);
   },  
   updateSong(request, response) {
-    const playlistId = request.params.id;
+    const wishlistId = request.params.id;
     const songId = request.params.songid;
     logger.debug("updating song " + songId);
     const updatedSong = {
@@ -50,9 +50,9 @@ const playlist = {
       genre: request.body.genre,
       duration: request.body.duration
     };
-    playlistStore.editSong(playlistId, songId, updatedSong);
-    response.redirect('/playlist/' + playlistId);
+    wishlistStore.editSong(wishlistId, songId, updatedSong);
+    response.redirect('/wishlist/' + wishlistId);
   }
 };
 
-module.exports = playlist;
+module.exports = wishlist;

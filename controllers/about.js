@@ -13,7 +13,7 @@ const about = {
     logger.info('about rendering');
     if (loggedInUser) {
       const viewData = {
-        title: 'About the Playlist App',
+        title: 'About the Wishlist App',
         developers: developerStore.getAllDevelopers(),
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       };

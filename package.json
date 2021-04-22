@@ -1,5 +1,5 @@
 {
-  "name": "playlist-app",
+  "name": "wishlist-app",
   "version": "0.0.1",
   "description": "A little playlist maker",
   "main": "server.js",

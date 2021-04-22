@@ -21,7 +21,7 @@ const accounts = {
   },
 
   logout(request, response) {
-    response.cookie('playlist', '');
+    response.cookie('wishlist', '');
     response.redirect('/');
   },
 
@@ -43,7 +43,7 @@ const accounts = {
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email);
     if (user) {
-      response.cookie('playlist', user.email);
+      response.cookie('wishlist', user.email);
       logger.info('logging in' + user.email);
       response.redirect('/start');
     } else {

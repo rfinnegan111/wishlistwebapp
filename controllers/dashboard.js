@@ -5,7 +5,7 @@ const logger = require("../utils/logger");
 const uuid = require("uuid");
 const accounts = require("./accounts.js");
 
-const playlistStore = require("../models/playlist-store.js");
+const wishlistStore = require("../models/wishlist-store.js");
 
 // create dashboard object
 const dashboard = {
@@ -15,26 +15,26 @@ const dashboard = {
     const loggedInUser = accounts.getCurrentUser(request);
     if (loggedInUser) {
       const viewData = {
-        title: "Playlist Dashboard",
-        playlists: playlistStore.getUserPlaylists(loggedInUser.id),
+        title: "Wishlist Dashboard",
+        wishlists: wishlistStore.getUserPlaylists(loggedInUser.id),
         fullname: loggedInUser.firstName + " " + loggedInUser.lastName
       };
-      logger.info("about to render" + viewData.playlists);
+      logger.info("about to render" + viewData.wishlists);
       response.render("dashboard", viewData);
     } else response.redirect("/");
   },
 
-  deletePlaylist(request, response) {
-    const playlistId = request.params.id;
-    logger.debug("Deleting Playlist" + playlistId);
-    playlistStore.removePlaylist(playlistId);
+  deleteWishlist(request, response) {
+    const wishlistId = request.params.id;
+    logger.debug("Deleting Wishlist" + wishlistId);
+    wishlistStore.removeWishlist(wishlistId);
     response.redirect("/dashboard");
   },
 
-  addPlaylist(request, response) {
+  addWishlist(request, response) {
     const date = new Date();
     const loggedInUser = accounts.getCurrentUser(request);
-    const newPlayList = {
+    const newWishList = {
       id: uuid(),
       userid: loggedInUser.id,
       title: request.body.title,
@@ -42,8 +42,8 @@ const dashboard = {
       date: date,
       songs: []
     };
-    logger.debug("Creating a new Playlist" + newPlayList);
-    playlistStore.addPlaylist(newPlayList, function() {
+    logger.debug("Creating a new Wishlist" + newWishList);
+    wishlistStore.addWishlist(newWishList, function() {
       response.redirect("/dashboard");
     });
   }

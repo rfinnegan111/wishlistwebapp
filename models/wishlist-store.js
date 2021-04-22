@@ -16,19 +16,19 @@ catch(e) {
 
 const playlistStore = {
 
-  store: new JsonStore('./models/playlist-store.json', { playlistCollection: [] }),
-  collection: 'playlistCollection',
+  store: new JsonStore('./models/wishlist-store.json', { wishlistCollection: [] }),
+  collection: 'wishlistCollection',
 
-  getAllPlaylists() {
+  getAllWishlists() {
     return this.store.findAll(this.collection);
   },
 
-  getPlaylist(id) {
+  getWishlist(id) {
     return this.store.findOneBy(this.collection, { id: id });
   },
 
-  addPlaylist(playlist, response) {
-    playlist.picture.mv('tempimage', err => {
+  addWishlist(wishlist, response) {
+    wishlist.picture.mv('tempimage', err => {
         if (!err) {
           cloudinary.uploader.upload('tempimage', result => {
             console.log(result);
