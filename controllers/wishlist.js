@@ -20,9 +20,9 @@ const wishlist = {
       }
       else response.redirect('/');
   },
-    deleteSong(request, response) {
+    deleteGame(request, response) {
     const wishlistId = request.params.id;
-    const songId = request.params.songid;
+    const gameId = request.params.gameid;
     logger.debug('Deleting Song' + songId + 'from Wishlist' + wishlistId);
     wishlistStore.removeSong(wishlistId, songId);
     response.redirect('/wishlist/' + wishlistId);

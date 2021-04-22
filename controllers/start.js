@@ -18,15 +18,15 @@ const start = {
       
       const wishlists = wishlistStore.getAllWishlists();
       let numWishlists = wishlists.length;
-      let numSongs = 0;
+      let numGames = 0;
       for (let i in wishlists) {
-        numSongs = numSongs + wishlists[i].songs.length;
+        numGames = numGames + wishlists[i].games.length;
       }
 
       const viewData = {
         title: 'Welcome to the Wishlist App!',
         totalWishlists: numWishlists,
-        totalSongs: numSongs,
+        totalGames: numGames,
         fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
       };
 

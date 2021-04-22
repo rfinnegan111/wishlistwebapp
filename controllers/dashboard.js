@@ -40,7 +40,7 @@ const dashboard = {
       title: request.body.title,
       picture: request.files.picture,
       date: date,
-      songs: []
+      games: []
     };
     logger.debug("Creating a new Wishlist" + newWishList);
     wishlistStore.addWishlist(newWishList, function() {
