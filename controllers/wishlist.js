@@ -33,9 +33,9 @@ const wishlist = {
     const newGame = {
       id: uuid(),
       title: request.body.title,
-      artist: request.body.artist,
+      console: request.body.console,
       genre: request.body.genre,
-      duration: request.body.duration
+      price: request.body.price
     };
     wishlistStore.addGame(wishlistId, newGame);
     response.redirect('/wishlist/' + wishlistId);
@@ -46,9 +46,9 @@ const wishlist = {
     logger.debug("updating game " + gameId);
     const updatedGame = {
       title: request.body.title,
-      artist: request.body.artist,
+      console: request.body.console,
       genre: request.body.genre,
-      duration: request.body.duration
+      price: request.body.price
     };
     wishlistStore.editGame(wishlistId, gameId, updatedGame);
     response.redirect('/wishlist/' + wishlistId);

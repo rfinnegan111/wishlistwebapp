@@ -65,9 +65,9 @@ const wishlistStore = {
     const games = wishlist.games;
     const index = games.findIndex(game => game.id === gameId);
     games[index].title = updatedGame.title;
-    games[index].artist = updatedGame.artist;
+    games[index].console = updatedGame.console;
     games[index].genre = updatedGame.genre;
-    games[index].duration = updatedGame.duration;
+    games[index].price = updatedGame.price;
   },
   
   getUserWishlists(userid) {

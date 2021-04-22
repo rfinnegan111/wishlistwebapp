@@ -10,9 +10,9 @@
         {
           "id": "c4f82a1b-2316-4d12-8c86-27d2a8889881",
           "title": "sonata no. 10",
-          "artist": "beethoven",
+          "console": "beethoven",
           "genre": "classical",
-          "duration": "6"
+          "price": "6"
         }
       ]
     }

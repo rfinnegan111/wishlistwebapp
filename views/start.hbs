@@ -6,22 +6,29 @@
       Welcome to the Wishlist App, {{fullname}}!
     </h1>
       <p>
-        This app will allow users to create and maintain a collection of wishlists.
+        This app allows users to create a collection of wishlists in order to keep track of the video games they wish to purchase sometime in the future.
       </p>
       <div class="buttons">
-        <button class="ui blue button" onclick="showHide()">
-          Read more <i class="arrow circle right icon"></i>
-        </button>
-        <button class="ui green button" onclick="alert('Thanks! You\'re okay too')">
-          Like it? <i class="thumbs up icon"></i>
-        </button>
-        <button class="ui red button" onclick="welcomeUser()">
-          Who are you? <i class="user icon"></i>
-        </button>
+        
+        <div class="ui animated fade button" tabindex="0" onclick="showHide()">
+          <div class="hidden content"><i class="arrow right icon"></i></div>
+          <div class="visible content">Read more</div>
+        </div>
+        
+        <div class="ui animated fade button" tabindex="0" onclick="alert('Thank you so much :)')">
+          <div class="hidden content"><i class="smile icon"></i></div>
+          <div class="visible content">Like the app?</div>
+        </div>
+        
+        <div class="ui animated fade button" tabindex="0" onclick="welcomeUser()">
+          <div class="hidden content"><i class="user icon"></i></div>
+          <div class="visible content">Username?</div>
+        </div>
+        
       </div>
       <div id="readmore" class="ui message">
         <p>
-          Over the coming months, we will add CRUD (Create, Read, Update, and Delete) functionality to this app. Users will also be able to create an account, log in, and upload images to the app.
+          This is my submission for Assignment 2 of the Web App Development 1 module. It is closely based on my Assignment 1 version, with some improvements made throughout. This app was created to combat an issue I had happen a lot, the issue of not being able to keep track of the games I wanted to buy at a future date.
         </p>  
       </div>
       <div id="welcomeuser" class="ui message" onclick="hideWelcome()"> </div>
