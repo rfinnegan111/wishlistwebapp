@@ -15,6 +15,14 @@
           "price": "6"
         }
       ]
+    },
+    {
+      "id": "ac910f8d-f10d-418d-8d77-b88ba5ae9874",
+      "userid": "28d6023d-2032-405a-bc47-9700a96e061e",
+      "title": "test playlist",
+      "picture": "http://res.cloudinary.com/k4ey4/image/upload/v1619189974/c6dqncidtrjemsawfvee.jpg",
+      "date": "2021-04-23T14:59:34.617Z",
+      "games": []
     }
   ]
 }
