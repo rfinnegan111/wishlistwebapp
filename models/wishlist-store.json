@@ -17,12 +17,20 @@
       ]
     },
     {
-      "id": "ac910f8d-f10d-418d-8d77-b88ba5ae9874",
+      "id": "41e4b381-35f0-4914-90ee-5c6c90b498e0",
       "userid": "28d6023d-2032-405a-bc47-9700a96e061e",
-      "title": "test playlist",
-      "picture": "http://res.cloudinary.com/k4ey4/image/upload/v1619189974/c6dqncidtrjemsawfvee.jpg",
-      "date": "2021-04-23T14:59:34.617Z",
-      "games": []
+      "title": "Nintendo ",
+      "picture": "http://res.cloudinary.com/k4ey4/image/upload/v1619271942/mli7bwynyfpcsfpcp1mx.jpg",
+      "date": "2021-04-24T13:45:42.527Z",
+      "games": [
+        {
+          "id": "ad1618a3-75dd-451b-8284-9b4b7af5bc9e",
+          "title": "Legend of Zelda: Breath of the Wild",
+          "console": "Nintendo Switch",
+          "genre": "Open World",
+          "price": "60"
+        }
+      ]
     }
   ]
 }

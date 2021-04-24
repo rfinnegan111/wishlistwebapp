@@ -1,10 +1,10 @@
 {{#unless wishlist.games}}
-  <h3 class="ui center aligned message">It's very quiet in here... start adding some games!</h3>
+  <h3 class="ui center aligned message">It's a bit empty in here... let's start by building your wishlist!</h3>
 {{/unless}}
 
 {{#if wishlist.games}}
 
-  <table class="ui fixed striped table">
+  <table class="ui inverted fixed striped table">
     <thead>
       <tr>
         <th class="four wide">Game</th>
@@ -57,8 +57,9 @@
     <span id="rating"> </span>
   </p>
 
-  <button class="ui blue button" onclick="getRating()">
-    Rate it! <i class="star icon"></i>
-  </button>
+  <div class="ui animated fade grey submit button" tabindex="0" onclick="getRating()">
+    <div class="hidden content"><i class="star icon"></i></div>
+    <div class="visible content">Rate the Wishlist!</div>
+  </div>
 
 {{/if}}
