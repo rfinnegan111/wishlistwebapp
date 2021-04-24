@@ -17,6 +17,10 @@ h1 {
   color: lightgray;
 }
 
+.ui.comments{
+  padding-left: 420px;
+}
+
 #readmore {
   display: none;
   color: lightgray;
