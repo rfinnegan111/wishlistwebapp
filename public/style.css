@@ -11,7 +11,7 @@ body {
 }
 
 .ui.header.item{
- color: thistle; 
+  background-color: navy;
 }
 
 h1 {
