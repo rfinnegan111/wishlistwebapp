@@ -1,22 +1,6 @@
 {
   "wishlistCollection": [
     {
-      "id": "f787eafe-d80d-49a3-8a4e-16fd685b5e24",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "title": "Another wishlist",
-      "picture": "http://res.cloudinary.com/week10lab/image/upload/v1584911713/sjrvxxgo3kh2z2wavemc.jpg",
-      "date": "2020-03-22T21:15:12.954Z",
-      "games": [
-        {
-          "id": "c4f82a1b-2316-4d12-8c86-27d2a8889881",
-          "title": "sonata no. 10",
-          "console": "beethoven",
-          "genre": "classical",
-          "price": "6"
-        }
-      ]
-    },
-    {
       "id": "41e4b381-35f0-4914-90ee-5c6c90b498e0",
       "userid": "28d6023d-2032-405a-bc47-9700a96e061e",
       "title": "Nintendo ",
@@ -29,6 +13,50 @@
           "console": "Nintendo Switch",
           "genre": "Open World",
           "price": "60"
+        },
+        {
+          "id": "818300fc-5d36-4117-a2fd-a5c6f094a0bb",
+          "title": "Animal Crossing: New Horizons",
+          "console": "nintendo Switch",
+          "genre": "Life-Sim",
+          "price": "60"
+        }
+      ]
+    },
+    {
+      "id": "0ed0b163-9e06-413d-82f0-bdd08e208c99",
+      "userid": "28d6023d-2032-405a-bc47-9700a96e061e",
+      "title": "Playstation",
+      "picture": "http://res.cloudinary.com/k4ey4/image/upload/v1619272677/es4og6hyin766mlukcki.webp",
+      "date": "2021-04-24T13:57:57.145Z",
+      "games": [
+        {
+          "id": "bf65df02-bac0-481d-981d-9c239b8a7f30",
+          "title": "Horizon Zero Dawn",
+          "console": "PS4",
+          "genre": "Open World",
+          "price": "20"
+        },
+        {
+          "id": "5dd667b8-e480-424c-9ad8-9a0f28a7f3b6",
+          "title": "Genshin Impact",
+          "console": "PS4 and PS5",
+          "genre": "Open World",
+          "price": "Free"
+        },
+        {
+          "id": "2ee8d248-4f6f-4e8d-a2bd-638bd67813e6",
+          "title": "Overwatch",
+          "console": "PS4",
+          "genre": "Shooter",
+          "price": "20"
+        },
+        {
+          "id": "b2d90131-7d1d-4ee0-926a-58aac7c6b08d",
+          "title": "Hollow Knight",
+          "console": "PS4 and PS5",
+          "genre": "Platformer",
+          "price": "15"
         }
       ]
     }
