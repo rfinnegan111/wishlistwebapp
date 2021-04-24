@@ -6,6 +6,13 @@
       "email": "nbot0415@gmail.com",
       "password": "testingassign123",
       "id": "28d6023d-2032-405a-bc47-9700a96e061e"
+    },
+    {
+      "firstName": "testing",
+      "lastName": "user",
+      "email": "tester@gmail.com",
+      "password": "testing user",
+      "id": "012fd170-caa8-4136-a963-129e9d11314a"
     }
   ]
 }
