@@ -1,6 +1,3 @@
-/* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
-
 // prints "hi" in the browser's dev tools console
 console.log("Hello from the Web App Dev 1 2nd assignment!");
 
@@ -10,7 +7,7 @@ function likeIt(){
 
 function showHide() {
   let readMoreDiv = document.getElementById("readmore");
-  readMoreDiv.style.color = "green";
+  readMoreDiv.style.color = "navy";
   if (readMoreDiv.style.display === "block") {
     readMoreDiv.style.display = "none";
   } else {
@@ -41,7 +38,7 @@ function getRating() {
   else{
     $("#rating").html("You gave a rating of: ");
     for (let i=0; i < userRating; i++){
-        $("#rating").append("<i class='yellow star icon'></i>");
+        $("#rating").append("<i class='blue star icon'></i>");
     }
   }
 }

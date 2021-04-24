@@ -9,7 +9,7 @@ const wishlistStore = require("../models/wishlist-store.js");
 
 // create dashboard object
 const dashboard = {
-  // index method - responsible for creating and rendering the view
+  // index method - creating and rendering the view
   index(request, response) {
     logger.info("dashboard rendering");
     const loggedInUser = accounts.getCurrentUser(request);

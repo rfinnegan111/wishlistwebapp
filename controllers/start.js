@@ -8,7 +8,7 @@ const accounts = require ('./accounts.js');
 // create start object
 const start = {
   
-  // index method - responsible for creating and rendering the view
+  // index method - creating and rendering the view
   index(request, response) {
     
     const loggedInUser = accounts.getCurrentUser(request);

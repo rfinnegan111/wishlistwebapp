@@ -10,7 +10,7 @@ try {
   cloudinary.config(env.cloudinary);
 }
 catch(e) {
-  logger.info('You must provide a Cloudinary credentials file - see README.md');
+  logger.info('You must provide a Cloudinary credentials file');
   process.exit(1);
 }
 
