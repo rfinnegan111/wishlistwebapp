@@ -10,6 +10,10 @@ body {
   background-color: azure;
 }
 
+.ui.header.item{
+ color: thistle; 
+}
+
 h1 {
   font-style: italic;
   color: lightgray;

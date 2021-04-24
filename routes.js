@@ -7,7 +7,7 @@ const router = express.Router();
 // import controllers
 const start = require('./controllers/start.js');
 const dashboard = require('./controllers/dashboard.js');
-const about = require('./controllers/about.js');
+const contact = require('./controllers/contact.js');
 const wishlist = require('./controllers/wishlist.js');
 const accounts = require ('./controllers/accounts.js');
 
@@ -22,7 +22,7 @@ router.post('/authenticate', accounts.authenticate);
 
 router.get('/start', start.index);
 router.get('/dashboard', dashboard.index);
-router.get('/about', about.index);
+router.get('/contact', contact.index);
 router.get('/wishlist/:id', wishlist.index);
 
 router.get('/wishlist/:id/deleteGame/:gameid', wishlist.deleteGame);
