@@ -59,6 +59,22 @@
           "price": "15"
         }
       ]
+    },
+    {
+      "id": "20bdfed7-abde-4d91-ba91-8fa3d4dd71b0",
+      "userid": "0ca9e3f3-654d-4c40-8eef-21250c0757e4",
+      "title": "test wishlist",
+      "picture": "http://res.cloudinary.com/k4ey4/image/upload/v1620136491/hioaqpfwihzs9djhaw5i.webp",
+      "date": "2021-05-04T13:54:51.245Z",
+      "games": [
+        {
+          "id": "ac1f0847-c624-493c-bd64-4edf88b03b2e",
+          "title": "Game 1 ",
+          "console": "Ps5",
+          "genre": "Platformer ",
+          "price": "30"
+        }
+      ]
     }
   ]
 }

@@ -13,6 +13,13 @@
       "email": "tester@gmail.com",
       "password": "testing user",
       "id": "012fd170-caa8-4136-a963-129e9d11314a"
+    },
+    {
+      "firstName": "Rebecca ",
+      "lastName": "Finnegan",
+      "email": "20093862@wit.ie",
+      "password": "test123",
+      "id": "0ca9e3f3-654d-4c40-8eef-21250c0757e4"
     }
   ]
 }
