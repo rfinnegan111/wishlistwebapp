@@ -75,6 +75,22 @@
           "price": "30"
         }
       ]
+    },
+    {
+      "id": "3b4666a0-8d53-4a6a-b677-b04114fa15ac",
+      "userid": "f5c2dfde-ca9d-4a10-bc5d-3c38bf8497ff",
+      "title": "Games wishlist",
+      "picture": "http://res.cloudinary.com/k4ey4/image/upload/v1620290453/ssilkmnbvkypzlebbaa0.jpg",
+      "date": "2021-05-06T08:40:53.609Z",
+      "games": [
+        {
+          "id": "791f84b3-c66f-4375-9c63-75e61fe1b4b6",
+          "title": "Journey",
+          "console": "PS",
+          "genre": "Adventure",
+          "price": "5.99"
+        }
+      ]
     }
   ]
 }
