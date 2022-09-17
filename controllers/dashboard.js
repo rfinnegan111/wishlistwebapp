@@ -17,7 +17,7 @@ const dashboard = {
       const viewData = {
         title: "Wishlist Dashboard",
         wishlists: wishlistStore.getUserWishlists(loggedInUser.id),
-        fullname: loggedInUser.firstName + " " + loggedInUser.lastName
+        fullname: loggedInUser.firstName + " " + loggedInUser.lastName,
       };
       logger.info("about to render" + viewData.wishlists);
       response.render("dashboard", viewData);
@@ -40,13 +40,13 @@ const dashboard = {
       title: request.body.title,
       picture: request.files.picture,
       date: date,
-      games: []
+      games: [],
     };
     logger.debug("Creating a new Wishlist" + newWishList);
-    wishlistStore.addWishlist(newWishList, function() {
+    wishlistStore.addWishlist(newWishList, function () {
       response.redirect("/dashboard");
     });
-  }
+  },
 };
 
 // export the dashboard module
